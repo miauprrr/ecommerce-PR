@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0; 
+}
+
+.greeting{
+    display: flex; /* Hacer que los elementos estén en línea */
+    justify-content: center;
+    margin: 20px
+}

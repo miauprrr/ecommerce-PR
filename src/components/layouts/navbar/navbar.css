@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0; 
+}
+.navbar-list {
+    list-style-type: none; /* Eliminar puntos de lista */
+    display: flex; /* Hacer que los elementos estén en línea */
+    justify-content: space-evenly; 
+    font-weight: bold;
+    font-size: large;
+    flex-wrap: wrap;/* Centrar los elementos */
+    margin: 20px;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+}
+
+.navbar-lc {
+    list-style-type: none; /* Eliminar puntos de lista */
+    display: flex; /* Hacer que los elementos estén en línea */
+    justify-content: space-between; 
+    font-weight: bold;
+    font-size: large;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.logoTienda {
+    width: 100px;
+}
