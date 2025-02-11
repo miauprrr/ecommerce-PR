@@ -1,11 +1,13 @@
-import Navbar from "./components/layouts/navbar/navbar"
+import Counter from "./components/common/counter/Counter"
+import Navbar from "./components/layouts/navbar/Navbar"
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer"
 
 function App() {
   return <div>
 
     <Navbar /> 
-    <ItemListContainer greeting= "¡Bienvenidos!"/>
+    {/* <ItemListContainer greeting= "¡Bienvenidos!"/> */}
+    <Counter />
 
   </div>
 }
