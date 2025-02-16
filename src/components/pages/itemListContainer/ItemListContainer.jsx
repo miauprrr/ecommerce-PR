@@ -28,7 +28,7 @@ const itemListContainer = () => {
 
     return (
         <div>
-            <h2> Acá van los productos</h2>
+            <h2 className='mensajeInicial'> SkinCare and MakeUp </h2>
             {items.map((item)=>{
                 return <ProductCart key ={item.id} {...item} />
                 })}

@@ -7,7 +7,7 @@ const Navbar = () => {
     <div>
         
         <ul className='navbar-lc'>
-            <li><a><img src="https://res.cloudinary.com/dzfgqdlaz/image/upload/v1739331544/miau-footer_feqsv0.jpg"alt="Logo tienda Miau"/></a></li>
+            <li><a><img className = 'logoTienda'src="https://res.cloudinary.com/dzfgqdlaz/image/upload/v1739331544/miau-footer_feqsv0.jpg"alt="Logo tienda Miau"/></a></li>
             <li><CartWidget /></li>
         </ul>
         <ul className="navbar-list"> 

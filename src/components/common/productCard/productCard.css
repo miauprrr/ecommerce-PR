@@ -1,0 +1,14 @@
+.imgProduct {
+    width: 300px;
+}
+
+.divProduct {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
