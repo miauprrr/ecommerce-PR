@@ -3,7 +3,7 @@ export const product =  [
         id:"1",
         title: "crema para cuerpo",
         price: 14990,
-        stock: 30,
+        stock: 7,
         category: "skincare",
         description: "crema humectante con niacidamina ",
         imageUrl: "https://res.cloudinary.com/dzfgqdlaz/image/upload/v1739331540/product-1_xtjvkz.jpg",

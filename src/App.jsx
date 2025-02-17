@@ -1,5 +1,5 @@
-import Counter from "./components/common/counter/Counter"
 import Navbar from "./components/layouts/navbar/Navbar"
+import ItemDetail from "./components/pages/itemDetail/ItemDetail"
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer"
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
     <Navbar /> 
     <ItemListContainer />
-    <Counter />
+    <ItemDetail />
   </div>
 }
 
