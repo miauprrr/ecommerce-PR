@@ -1,19 +1,26 @@
 import './navbar.css'
 import CartWidget from "../../common/cartWidget/CartWidget"
-
+import { Link } from 'react-router'
 
 const Navbar = () => {
     return (
     <div>
-        
         <ul className='navbar-lc'>
-            <li><a><img className = 'logoTienda'src="https://res.cloudinary.com/dzfgqdlaz/image/upload/v1739331544/miau-footer_feqsv0.jpg"alt="Logo tienda Miau"/></a></li>
-            <li><CartWidget /></li>
+            <li>
+                <Link to="/">
+                    <img className = 'logoTienda'src="https://res.cloudinary.com/dzfgqdlaz/image/upload/v1739331544/miau-footer_feqsv0.jpg"alt="Logo tienda Miau"/>
+                </Link>
+            </li>
+            <li>
+                <Link to="/cart">
+                    <CartWidget />
+                </Link>
+            </li>
         </ul>
         <ul className="navbar-list"> 
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Skincare</a></li>
-            <li><a href="">Maquillaje</a></li>
+            <Link to="/">Inicio</Link>
+            <Link to="/category/skincare">Skincare</Link>
+            <Link to="/category/maquillaje">Maquillaje</Link>
             <li><a href="">Nosotros</a></li>
             <li><a href="">Contacto</a></li>
         </ul>

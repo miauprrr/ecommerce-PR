@@ -1,10 +1,13 @@
+import { Badge } from '@mui/material'
 import './cartWidget.css'
-import { FaCartShopping } from "react-icons/fa6"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const CartWidget = () => {
     return (
         <div>
-            8 <FaCartShopping />
+            <Badge badgeContent={4} color= "secondary">
+                <ShoppingCartIcon /> 
+            </Badge>
         </div>
     )
 }

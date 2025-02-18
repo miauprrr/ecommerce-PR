@@ -11,10 +11,6 @@ const FetchingData = () => {
             .catch((error) => console.log(error))
     }, [ ])
 
-    // const createUser => {}
-
-
-
     return (
         <div>
             {users.map((user) =>{

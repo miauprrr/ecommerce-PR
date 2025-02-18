@@ -2,10 +2,11 @@ import { useState } from "react"
 import {product} from "../../../products"
 import { useEffect } from "react"
 import Counter from "../../common/counter/Counter"
+import { useParams } from "react-router"
+import './itemDetail.css'
 
 const ItemDetail = () => {
-
-    let id = "1"
+    const {id} = useParams ()
 
     const [ item, setItem ] = useState ({})
     useEffect(() => {
@@ -15,6 +16,7 @@ const ItemDetail = () => {
 
     return (
     <div>
+        <img className="imgProduct" src={item.imageUrl} alt="" />
         <h2>{item.title}</h2>
         <h2> {item.description}</h2>
         <Counter item = {item}/>
