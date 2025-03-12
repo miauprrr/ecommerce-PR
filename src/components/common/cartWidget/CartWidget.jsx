@@ -1,11 +1,16 @@
 import { Badge } from '@mui/material'
 import './cartWidget.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useContext } from 'react';
+import { CartContext } from '../../../context/CartContext';
 
 const CartWidget = () => {
+
+    const { getTotalQuantity } = useContext(CartContext)
+    const total = getTotalQuantity()
     return (
         <div>
-            <Badge badgeContent={4} color= "secondary">
+            <Badge badgeContent={total} color= "secondary" showZero = {true}>
                 <ShoppingCartIcon /> 
             </Badge>
         </div>
