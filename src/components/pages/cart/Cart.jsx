@@ -8,7 +8,6 @@ import { toast } from 'sonner'
 
 const Cart = () => {
   const { resetCart, cart, removeById, getTotalAmount } = useContext(CartContext)
-  console.log(cart)
   let total = getTotalAmount()
   const resetCartWithAlert = () => {
     Swal.fire({
@@ -38,9 +37,10 @@ const Cart = () => {
       {cart.map((elemento) => {
         return (
           <div key={elemento.id} className='productosCarrito'>
+            <img src={elemento.imageUrl} alt="" />
             <h2>{elemento.title}</h2>
             <h2> Cantidad: {elemento.quantity}</h2>
-            <h2> Precio: {elemento.price} </h2>
+            <h2> Precio: ${elemento.price} </h2>
             <Button variant='text' onClick={() => {
               removeById(elemento.id);
               toast.warning("Producto eliminado")
@@ -51,17 +51,20 @@ const Cart = () => {
       })}
 
 
-      {cart.length > 0 &&
-        <h2>
-          El total a pagar es {total}
-        </h2>}
-
-      <Button variant="outlined" onClick={resetCartWithAlert}>
-        Vaciar carrito
-      </Button>
-      <Button variant="contained">
-        <Link to="/checkout"> Finalizar compra</Link>
-      </Button>
+      <div className='botonesCarrito'>
+        {cart.length > 0 &&
+          <h2>
+            El total a pagar es: ${total}
+          </h2>}
+        <div className='botones'>
+          <Button variant="outlined" onClick={resetCartWithAlert}>
+            Vaciar carrito
+          </Button>
+          <Button variant="contained">
+            <Link to="/checkout"> Finalizar compra</Link>
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }

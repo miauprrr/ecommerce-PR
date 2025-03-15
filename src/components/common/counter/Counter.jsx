@@ -25,7 +25,6 @@ const Counter = ({ item }) => {
   }
 
   const onAdd = () => {
-    console.log("agregar al carrito")
     let objetoCarrito = { ...item, quantity: contador }
     addToCart(objetoCarrito)
     toast.success("Producto agregado", { duration: 3000 })

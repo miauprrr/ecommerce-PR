@@ -1,5 +1,25 @@
 .productosCarrito {
-    margin: 10 px
-    width: 200 px
-    border: 1 px solid black
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    justify-content: space-between;
+}
+
+.productosCarrito img {
+    width: 100px;
+}
+
+.botonesCarrito {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.botones {
+    margin-right: 20px;
+}
+
+.botones Button {
+    margin: 10px;
 }

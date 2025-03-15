@@ -3,6 +3,8 @@ import { useState } from "react"
 import { CartContext } from "../../../context/CartContext"
 import { db } from "../../../firebaseConfig"
 import { addDoc, collection, updateDoc, doc } from "firebase/firestore"
+import './checkout.css'
+import { Box, CircularProgress } from "@mui/material"
 
 
 const Checkout = () => {
@@ -51,14 +53,14 @@ const Checkout = () => {
 
 
     return (
-        <div>
+        <div >
             {
                 !isLoading && orderId && (
                     <h2> Gracias por tu compra. Tu número de orden es {orderId} </h2>
                 )}
             {
                 !isLoading && !orderId && (
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className="formulario">
                         <input type="text " placeholder="nombre" name="nombre" onChange={handleChange} />
                         <input type="text " placeholder="email" name="email" onChange={handleChange} />
                         <input type="text " placeholder="teléfono" name="teléfono" onChange={handleChange} />
@@ -67,9 +69,16 @@ const Checkout = () => {
                     </form>
                 )}
             {isLoading &&
-                <h2>
-                    Cargando...  //poner otra cosa.
-                </h2>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        minHeight: '100vh',
+                    }}
+                >
+                    <CircularProgress />
+                </Box>
             }
         </div>
     )

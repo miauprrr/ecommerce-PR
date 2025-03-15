@@ -22,7 +22,7 @@ const ItemDetail = () => {
     }, [id])
 
     return (
-        <div>
+        <div className="itemDetail">
             <img className="imgProduct" src={item.imageUrl} alt="" />
             <h2>{item.title}</h2>
             <h2> {item.description}</h2>

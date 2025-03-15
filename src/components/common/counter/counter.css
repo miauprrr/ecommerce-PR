@@ -1,4 +1,6 @@
 .styleButton {
     display: flex;
-    gap: 20 px
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
 }

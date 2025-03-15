@@ -1,9 +1,8 @@
 import "./itemListContainer.css";
 import ProductCart from "../../common/productCard/ProductCart";
-import { product } from "../../../products";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { CircularProgress } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 import { db } from "../../../firebaseConfig";
 import { getDocs, collection, addDoc, query, where } from "firebase/firestore";
 
@@ -33,20 +32,19 @@ const itemListContainer = () => {
     })
   }, [name])
 
-  // const rellenar = () => {
-  //   let productsCollections = collection(db, "products")
-
-  //   product.forEach((product) => {
-  //     addDoc(productsCollections, product)
-  //   });
-  // }
-
   return (
     <div>
       <h1 className="mensajeInicial"> SkinCare and MakeUp </h1>
-      {/* <button onClick={rellenar}> Rellenar db</button> */}
       {items.length === 0 ? (
-        <CircularProgress />
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh', // Esto asegura que ocupe toda la altura de la ventana
+          }}>
+          <CircularProgress />
+        </Box>
       ) : (
         <div>
           {items.map((item) => {
